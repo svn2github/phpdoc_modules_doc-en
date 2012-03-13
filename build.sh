@@ -6,6 +6,8 @@
 # cd doc-en
 
 php doc-base/configure.php  --enable-xml-details
+rm -f core
 phd --docbook doc-base/.manual.xml --package PHP --format xhtml
-open output/php-chunked-xhtml/index.html &
+phd --docbook doc-base/.manual.xml --enable-xml-details --format php --package PHP --noindex
+#open output/php-chunked-xhtml/index.html &
 
